@@ -43,7 +43,7 @@ rnaseq_sf <- c(
 # Asignar nombre de muestra a cada fila
 names(rnaseq_sf) <- c("AbrahamSimpson", "HomerSimpson", "MargeSimpson", "PattyBouvier", "SelmaBouvier")
 
-tx2gene <- read.table("../Muestras/Transcrito_a_Gen.tsv", header = FALSE, sep = "\t")
+tx2gene <- read.table("../Referencias/Transcrito_a_Gen.tsv", header = FALSE, sep = "\t")
 colnames(tx2gene) <- c("txname", "geneid")
 
 # Importar archivos sf
@@ -69,9 +69,6 @@ metadata <- data.frame(
   )
 )
 
-
-
-
 ##### DESEQ 
 
 # Redondear datos del conteo de RNAseq
@@ -93,7 +90,6 @@ resultadodeseq_df <- as.data.frame(resultadodeseq)
 # MA Plot (al haber tan pocos datos no creo que sea muy útil la verdad)
 plotMA(resultadodeseq)
 
-
 # Volcano Plot 
 EnhancedVolcano(
   resultadodeseq,
@@ -111,8 +107,6 @@ EnhancedVolcano(
     axis.title = element_text(size = 16),
     axis.text = element_text(size = 14)  
   )
-
-
 
 ##### HEATMAP
 
@@ -132,7 +126,6 @@ pheatmap(mat_scaled,
          fontsize_col = 8,
          color = colorRampPalette(c("blue", "white", "red"))(50),
          main = "HeatMap All Genes")
-
 
 ##### HEATMAP TOP 10 GENES 
 res_orderedv1 <- resultadodeseq[order(resultadodeseq$padj), ]
@@ -157,7 +150,6 @@ pheatmapv1 <- pheatmap(
   cellheight = 30, 
   main = "Top 10 genes diferencialmente expresados"
 )
-
 
 ##### ENRIQUECIMIENTO
 
@@ -218,10 +210,3 @@ e_reactome <- enrichPathway(gene = sig_genes$ENTREZID,
                             qvalueCutoff = 1)
 plot_reactome <- dotplot(e_reactome, showCategory = 20) + ggtitle("Reactome enrichment (ORA)") + theme(axis.text.y=element_text(size=6))
 plot_reactome
-
-
-
-
-
-
-

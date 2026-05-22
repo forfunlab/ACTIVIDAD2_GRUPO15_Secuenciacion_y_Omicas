@@ -1,26 +1,15 @@
-![Conda](https://img.shields.io/badge/Env-Conda-3498DB?style=for-the-badge&logo=anaconda&logoColor=white)
-![FastQC](https://img.shields.io/badge/QC-FastQC-blue?style=for-the-badge)
-![Fastp](https://img.shields.io/badge/Filtering-Fastp-blue?style=for-the-badge)
-![MultiQC](https://img.shields.io/badge/Report-MultiQC-green?style=for-the-badge)
-![Salmon](https://img.shields.io/badge/Quant-Salmon_1.10.3-orange?style=for-the-badge)!
-[R Language](https://img.shields.io/badge/Language-R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-![DESeq2](https://img.shields.io/badge/Analysis-DESeq2-purple?style=for-the-badge)
-![EnhancedVolcano](https://img.shields.io/badge/Plot-Volcano-red?style=for-the-badge)
-![ClusterProfiler](https://img.shields.io/badge/Enrichment-clusterProfiler-brightgreen?style=for-the-badge)
-![Flextable](https://img.shields.io/badge/Table-flextable-blue?style=for-the-badge)
-
-# 🛠️ Guía de Ejecución de los Scripts de Análisis
+# Guía de Ejecución de los Scripts de Análisis
 
 Este directorio contiene las herramientas y flujos de trabajo necesarios para procesar los datos de secuenciación crudos de RNA-seq hasta la obtención de perfiles de expresión diferencial y su posterior análisis de enriquecimiento funcional.
 
 ---
 
-## 📋 Flujo de Trabajo y Contenido
+## Flujo de Trabajo y Contenido
 
 El análisis se divide en dos fases consecutivas y complementarias:
 
-### 1️⃣ Fase 1: Control de Calidad, Filtrado y Cuantificación
-* **Script:** [`control_calidad_y_conteo.md`](file:///Users/danielresende/Documents-copy/workspace/ACTIVIDAD2_GRUPO15_Secuenciacion_y_Omicas/Scripts/control_calidad_y_conteo.md)
+### Fase 1: Control de Calidad, Filtrado y Cuantificación
+* **Script:** [`control_calidad_y_conteo.md`](./control_calidad_y_conteo.md)
 * **Objetivo:** Preparar los datos crudos y cuantificar los transcritos.
 * **Herramientas utilizadas (Entorno Conda):**
   * `FastQC`: Control de calidad visual de las lecturas crudas y filtradas.
@@ -28,8 +17,8 @@ El análisis se divide en dos fases consecutivas y complementarias:
   * `MultiQC`: Agregación de todos los reportes de calidad en un único informe interactivo HTML.
   * `Salmon` (versión recomendada `1.10.3`): Creación de índice de transcriptoma y pseudoalineamiento rápido para cuantificar niveles de expresión (*transcripts abundance estimation*).
 
-### 2️⃣ Fase 2: Análisis Estadístico y Visualización en R
-* **Script:** [`visualizacion_genes.R`](file:///Users/danielresende/Documents-copy/workspace/ACTIVIDAD2_GRUPO15_Secuenciacion_y_Omicas/Scripts/visualizacion_genes.R)
+### Fase 2: Análisis Estadístico y Visualización en R
+* **Script:** [`visualizacion_genes.R`](./visualizacion_genes.R)
 * **Objetivo:** Determinar los genes con expresión diferencial significativa y analizar sus implicaciones biológicas.
 * **Paquetes R claves:**
   * `tximport`: Importa las cuantificaciones de Salmon (`quant.sf`) y las agrupa a nivel de gen utilizando el mapa de referencia `Transcrito_a_Gen.tsv`.
