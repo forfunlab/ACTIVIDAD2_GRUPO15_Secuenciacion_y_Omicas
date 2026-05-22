@@ -26,36 +26,3 @@ El análisis se divide en dos fases consecutivas y complementarias:
   * `EnhancedVolcano` & `pheatmap`: Generación de gráficos volcán y mapas de calor interactivos/estáticos con los genes y el top 10 de expresión diferencial.
   * `clusterProfiler` & `ReactomePA`: Análisis de enriquecimiento funcional mediante sobre-representación (ORA) para procesos biológicos (Gene Ontology - BP) y rutas metabólicas (Reactome).
   * `flextable` & `dplyr`: Formateo de tablas elegantes y manipulación ágil de datos biológicos.
-
----
-
-## 🚀 Instrucciones de Inicio Rápido
-
-Sigue estos pasos en orden secuencial para reproducir el análisis completo:
-
-### Paso 1: Configurar el Entorno de Trabajo (Conda)
-Crea y activa el entorno virtual de Conda con las herramientas necesarias para la primera fase:
-```bash
-# Crear entorno conda
-conda create -vv -n Actividad2 -c bioconda -c conda-forge -c defaults -c r fastqc fastp multiqc salmon=1.10.3
-
-# Activar el entorno
-conda activate Actividad2
-```
-
-### Paso 2: Ejecutar el Preprocesamiento de Lecturas
-Sigue las instrucciones detalladas en [`control_calidad_y_conteo.md`](file:///Users/danielresende/Documents-copy/workspace/ACTIVIDAD2_GRUPO15_Secuenciacion_y_Omicas/Scripts/control_calidad_y_conteo.md):
-1. Generar la estructura de carpetas de soporte (`Quality/Raw`, `Quality/Filtered`, `Trimmed`, `Quantified`).
-2. Analizar calidad preliminar con `FastQC`.
-3. Filtrar adaptadores y recortar extremos de baja calidad con `fastp` en bucle para todas las muestras.
-4. Realizar control de calidad final con `FastQC` y consolidar con `MultiQC`.
-5. Construir el índice del transcriptoma de referencia e iniciar la cuantificación individual con `Salmon`.
-
-### Paso 3: Análisis y Visualización Downstream en R
-Abre una terminal interactiva de R o RStudio y ejecuta el script [`visualizacion_genes.R`](file:///Users/danielresende/Documents-copy/workspace/ACTIVIDAD2_GRUPO15_Secuenciacion_y_Omicas/Scripts/visualizacion_genes.R):
-```bash
-# Desde la carpeta Scripts/
-Rscript visualizacion_genes.R
-```
-> [!NOTE]
-> El script instalará automáticamente las dependencias que falten en tu entorno local a través de `BiocManager` y guardará los gráficos generados directamente en la carpeta `/Gráficos`.
