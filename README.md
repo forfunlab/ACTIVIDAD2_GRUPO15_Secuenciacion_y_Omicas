@@ -23,6 +23,6 @@ El repositorio está organizado en las siguientes carpetas principales:
 
 * **Muestras:** Contiene los datos crudos de secuenciación pareada (`.fastq.gz`) de los individuos bajo estudio y el archivo de mapeo `Transcrito_a_Gen.tsv`, indispensable para tximport en la conversión a nivel de gen.
 * **Referencias:** Almacena la secuencia FASTA del genoma de referencia y una base de datos local organizada por genes, con secuencias completas y reportes asociados a los 37 genes de obesidad evaluados.
-* **Scripts:** Alberga las directrices de ejecución de control de calidad, filtrado y conteo y el código R para análisis estadístico de expresión diferencial y enriquecimiento. Esta carpeta tiene sus propias instrucciones en su archivo [README.md](./control_calidad_y_conteo.md).
+* **Scripts:** Alberga las directrices de ejecución de control de calidad, filtrado y conteo y el código R para análisis estadístico de expresión diferencial y enriquecimiento. Esta carpeta tiene sus propias instrucciones en su archivo [README.md](./Scripts/README.md).
 * **Gráficos:** Reúne las salidas visuales del análisis, tales como diagramas de volcán (Volcano Plot), mapas de calor (Heatmap) y gráficos de puntos de enriquecimiento (Dotplot), para una rápida visualización.
 
