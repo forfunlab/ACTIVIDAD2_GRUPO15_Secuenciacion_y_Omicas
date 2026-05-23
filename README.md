@@ -1,11 +1,11 @@
 ![Bash](https://img.shields.io/badge/Scripting-Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Conda](https://img.shields.io/badge/Env-Conda-3498DB?style=for-the-badge&logo=anaconda&logoColor=white)
+![R Language](https://img.shields.io/badge/Language-R-276DC3?style=for-the-badge&logo=r&logoColor=white)
+![Bioconductor](https://img.shields.io/badge/PackageManagement-Bioconductor-blueviolet?style=for-the-badge&logo=bioconductor&logoColor=white)
 ![FastQC](https://img.shields.io/badge/QualityControl-FastQC-blue?style=for-the-badge)
 ![Fastp](https://img.shields.io/badge/Filtering-Fastp-blue?style=for-the-badge)
 ![Salmon](https://img.shields.io/badge/Quantification-Salmon_-orange?style=for-the-badge)
-![R Language](https://img.shields.io/badge/Language-R-276DC3?style=for-the-badge&logo=r&logoColor=white)
 ![DESeq2](https://img.shields.io/badge/Analysis-DESeq2-purple?style=for-the-badge)
-![Bioconductor](https://img.shields.io/badge/PackageManagement-Bioconductor-blueviolet?style=for-the-badge&logo=bioconductor&logoColor=white)
 
 
 # Expresión diferencial de genes relacionados con obesidad​
